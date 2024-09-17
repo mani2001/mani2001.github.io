@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio with Chat</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2); /* Gradient Background */
+      color: #333333;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Navigation Bar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+      border-radius: 50%;
+    }
+
+    .navbar .logo h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      color: #333333;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      list-style-type: none;
+    }
+
+    .navbar .nav-links li {
+      margin: 0 15px;
+    }
+
+    .navbar .nav-links li a {
+      color: #333333;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .navbar .nav-links li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #667eea;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: width 0.3s ease;
+    }
+
+    .navbar .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    /* Tab Content Styling */
+    .tab-content {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      margin: 60px auto;
+      color: #333333;
+      backdrop-filter: blur(10px);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .tab-content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Social Media Icons Styling */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      margin: 10px 15px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #333333;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: translateY(-5px);
+      color: #667eea;
+    }
+
+    .social-links img {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+    }
+
+    /* Chat Interface */
+    .chat-interface {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      height: 500px;
+      margin: 20px auto 60px auto;
+      color: #333333;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Chat Window Styling */
+    .chat-window {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Common Message Styling */
+    .chat-window p {
+      max-width: 75%;
+      margin-bottom: 15px;
+      padding: 12px 18px;
+      border-radius: 20px;
+      word-wrap: break-word;
+      font-size: 16px;
+      line-height: 1.4;
+      position: relative;
+    }
+
+    /* User Message Styling */
+    .user-message {
+      background-color: #667eea;
+      color: #ffffff;
+      align-self: flex-end;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+
+    /* Bot Message Styling */
+    .bot-message {
+      background-color: #e0e0e0;
+      align-self: flex-start;
+      margin-right: auto;
+      margin-left: 10px;
+    }
+
+    .chat-input {
+      display: flex;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 12px 20px;
+      border: 1px solid #ddd;
+      background-color: #ffffff;
+      color: #333333;
+      border-radius: 30px;
+      margin-right: 10px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .chat-input input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .chat-btn {
+      padding: 0;
+      background-color: #667eea;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .chat-btn:hover {
+      background-color: #5a67d8;
+      transform: translateY(-3px);
+    }
+
+    /* Scrollbar Styling */
+    .chat-window::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .chat-window::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .navbar .nav-links li {
+        margin: 0 10px;
+      }
+
+      .navbar .nav-links li a {
+        font-size: 16px;
+      }
+
+      .tab-content h2 {
+        font-size: 28px;
+      }
+
+      .tab-content p {
+        font-size: 16px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Logo Section -->
+    <div class="logo">
+      <img src="{{ url_for('static', filename='assets/me.jpeg') }}" alt="profile pic">
+      <h2>My Portfolio</h2>
+    </div>
+    
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#" onclick="showTab('about')">About Me</a></li>
+      <li><a href="#" onclick="showTab('social')">Social Links</a></li>
+      <li><a href="#" onclick="showTab('resume')">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Tab Content -->
+  <div id="about" class="tab-content active">
+    <h2>About Me</h2>
+    <p>I am a graduate student specializing in AI at Northeastern University, with a background in computer science. I'm passionate about applying AI to solve real-world problems and exploring cutting-edge technologies. My goal is to leverage my academic and professional experiences to drive innovation and create impactful solutions in the AI domain.</p>
+  </div>
+
+  <div id="social" class="tab-content">
+    <h2>Social Links</h2>
+    <div class="social-links">
+      <a href="https://leetcode.com/u/brahm2k1/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode">LeetCode
+      </a>
+      <a href="https://github.com/mani2001/" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">GitHub
+      </a>
+      <a href="https://linkedin.com/in/manikantan2001" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">LinkedIn
+      </a>
+      <a href="https://medium.com/@manikantan.srinivasan2001" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg" alt="Medium">Medium
+      </a>
+    </div>
+  </div>
+
+  <div id="resume" class="tab-content">
+    <h2>My Resume</h2>
+    <p>You can view my resume below:</p>
+    <a href="{{ url_for('static', filename='assets/resume.pdf') }}" target="_blank">View Resume</a>
+  </div>
+
+  <!-- Chat Interface -->
+  <div class="chat-interface">
+    <div class="chat-window" id="chat-window">
+      <!-- Chat messages will appear here -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button class="chat-btn" onclick="sendMessage()">
+        &#9658; <!-- Send icon -->
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Tab Switching Functionality
+    function showTab(tabName) {
+      var i, tabContent;
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].classList.remove("active");
+      }
+      document.getElementById(tabName).classList.add("active");
+    }
+
+    // Chat Functionality
+    function sendMessage() {
+      const chatInput = document.getElementById('chat-input');
+      const chatWindow = document.getElementById('chat-window');
+      const message = chatInput.value;
+
+      if (message.trim()) {
+        // Display user's message
+        const userMessage = document.createElement('p');
+        userMessage.classList.add('user-message');
+        userMessage.textContent = message;
+        chatWindow.appendChild(userMessage);
+
+        // Scroll to the bottom
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+
+        // Send message to the server
+        fetch('/chatbot/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: message
+          })
+        })
+
+        .then(response => response.json())
+        .then(data => {
+          const botMessage = document.createElement('p');
+          botMessage.classList.add('bot-message');
+          botMessage.textContent = data.response;
+          chatWindow.appendChild(botMessage);
+
+          // Scroll to the bottom
+          chatWindow.scrollTop = chatWindow.scrollHeight;
+        })
+        .catch(error => console.error('Error:', error));
+
+        // Clear input field
+        chatInput.value = '';
+      }
+    }
+
+    // CSRF Token Getter
+    function getCSRFToken() {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, 10) === 'csrftoken=') {
+            cookieValue = decodeURIComponent(cookie.substring(10));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+  </script>
+
+</body>
+</html>
