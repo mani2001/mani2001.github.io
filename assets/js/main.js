@@ -190,3 +190,24 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== EXPERIENCE MODAL ====================*/
+function showExperienceModal(id) {
+    const modal = document.getElementById(`${id}-modal`);
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function hideExperienceModal(id) {
+    const modal = document.getElementById(`${id}-modal`);
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('experience__modal')) {
+        const id = e.target.id.replace('-modal', '');
+        hideExperienceModal(id);
+    }
+});

@@ -17,6 +17,84 @@
         <link rel="stylesheet" href="./assets/css/styles.css">
 
         <title>Mani - AI GRAD STUDENT | Portfolio</title>
+
+        <style>
+            /* Experience Modal Styles */
+            .experience__details-btn {
+                padding: 8px 16px;
+                background-color: var(--first-color);
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                margin-top: 10px;
+                transition: background-color 0.3s;
+            }
+
+            .experience__details-btn:hover {
+                background-color: var(--first-color-alt);
+            }
+
+            .experience__modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .experience__modal-content {
+                background-color: white;
+                margin: 15% auto;
+                padding: 20px;
+                border-radius: 8px;
+                width: 80%;
+                max-width: 600px;
+                position: relative;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .experience__modal-close {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+                color: #666;
+            }
+
+            .experience__modal-close:hover {
+                color: #333;
+            }
+
+            .experience__modal h3 {
+                margin-top: 0;
+                color: #333;
+                margin-bottom: 15px;
+            }
+
+            .experience__modal p {
+                color: #444;
+                line-height: 1.6;
+                margin-bottom: 8px;
+            }
+
+            .experience__modal ul {
+                list-style-type: disc;
+                margin-left: 20px;
+                color: #444;
+            }
+
+            .experience__modal li {
+                margin-bottom: 8px;
+                line-height: 1.4;
+            }
+        </style>
     </head>
     <body>
         <header class="header" id="header">
@@ -162,12 +240,12 @@
 
                         <div class="about__info">
                             <div>
-                                <span class="about__info-title">3</span>
+                                <span class="about__info-title">3+</span>
                                 <span class="about__info-name">Internships</span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">3.5</span>
+                                <span class="about__info-title">3.7</span>
                                 <span class="about__info-name">GPA</span>
                             </div>
 
@@ -189,357 +267,46 @@
 
             <section class="skills section" id="skills">
                 <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">Technical & Non-Technical Skills</span>
+                <span class="section__subtitle">My Expertise</span>
 
-                <div class="skills__container container grid">
-                    
-                    <div>
-                        <div class="skills__content skills__open">
-                            <div class="skills__header">
-                                <i class="uil uil-brain skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">AI & Data Science</h1>
-                                    <span class="skills__subtitle"></span>
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">  
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Multimodal Generative AI</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__cv"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Natural Language Processing</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__nlp" style="width: 90%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Data Analytics and Visualization</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__ap" style="width: 85%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Reinforcement Learning</h3>
-                                        <span class="skills__number">70%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__ps" style="width: 70%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">AI Agents, RAG & FineTuning</h3>
-                                        <span class="skills__number">80%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__dav" style="width: 80%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Data Mining and Preprocessing</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__datamining" style="width: 90%;"></span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-code-branch skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Programming</h1>
-                                    <span class="skills__subtitle"></span>
-                                </div>
-                                
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">Python</h3>
-                                            <span class="skills__number">95%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__python"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">C++</h3>
-                                            <span class="skills__number">80%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__cpp" style="width: 80%;"></span>
-                                        </div>
-                                    </div>
-                                    
-
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">SQL</h3>
-                                            <span class="skills__number">85%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__sql" style="width: 85%;"></span>
-                                        </div>
-                                    </div>
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">NoSQL & GraphDB</h3>
-                                            <span class="skills__number">85%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__nosql" style="width: 85%;"></span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                        </div>
-
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-layer-group skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Frameworks and Libraries</h1>
-                                    <span class="skills__subtitle"></span>
-                                </div>
-                                
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                                </div>
-
-                                <div class="skills__list grid">
-                                    
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">Langchain & LlamaIndex</h3>
-                                            <span class="skills__number">90%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__langchain" style="width: 90%;"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">Pytorch</h3>
-                                            <span class="skills__number">80%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__pytorch" style="width: 80%;"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">Huggingface</h3>
-                                            <span class="skills__number">80%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__hf" style="width: 80%"></span>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">Flutter</h3>
-                                            <span class="skills__number">70%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__flutter" style="width: 70%"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">Flask</h3>
-                                            <span class="skills__number">70%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__flask" style="width: 70%"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="skills__data">
-                                        <div class="skills__titles">
-                                            <h3 class="skills__name">Pandas, matplotlib, seaborn</h3>
-                                            <span class="skills__number">80%</span>
-                                        </div>
-                                        <div class="skills__bar">
-                                            <span class="skills__percentage skills__df" style="width: 80%"></span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-server skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">BackEnd and Cloud</h1>
-                                    <span class="skills__subtitle"></span>
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Python-Flask</h3>
-                                        <span class="skills__number">80%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__html" style="width: 80%;"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Python-Django</h3>
-                                        <span class="skills__number">80%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__css" style="width: 80%"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Google Cloud Platform</h3>
-                                        <span class="skills__number">75%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__js" style="width: 75%;"></span>
-                                    </div>
-                                </div>
-    
-                                
-                            </div>
-                        </div>
-    
+                <div class="skills__container container">
+                    <div class="skills__bubble-wrapper">
+                        <!-- AI & ML Skills -->
+                        <div class="skill__bubble">AI Agents</div>
+                        <div class="skill__bubble">LLM Fine-tuning</div>
+                        <div class="skill__bubble">Generative AI</div>
+                        <div class="skill__bubble">RAG Systems</div>
+                        <div class="skill__bubble">Knowledge Graphs</div>
+                        <div class="skill__bubble">Machine Learning</div>
+                        <div class="skill__bubble">Deep Learning</div>
+                        <div class="skill__bubble">NLP</div>
+                        <div class="skill__bubble">Computer Vision</div>
                         
-
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-analysis skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">Misc</h1>
-                                    <span class=""></span>
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Git</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__git" style="width: 85%"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Bash</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__bash" style="width: 85%"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">JIRA</h3>
-                                        <span class="skills__number">75%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__jira"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Software lifecycle</h3>
-                                        <span class="skills__number">80%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__sl" style="width: 80%"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Leadership</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__lead" style="width: 90%"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Communication</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__com" sytle="width: 90%"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Time Management</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__tm"style="width: 90%"></span>
-                                    </div>
-                                </div>
-    
-                            </div>
-                        </div>
+                        <!-- Data Related -->
+                        <div class="skill__bubble">Data Mining</div>
+                        <div class="skill__bubble">Data Science</div>
+                        <div class="skill__bubble">Data Analytics</div>
+                        
+                        <!-- Programming Languages -->
+                        <div class="skill__bubble">Python</div>
+                        <div class="skill__bubble">C++</div>
+                        <div class="skill__bubble">SQL</div>
+                        <div class="skill__bubble">Bash</div>
+                        
+                        <!-- Frameworks & Tools -->
+                        <div class="skill__bubble">PyTorch</div>
+                        <div class="skill__bubble">TensorFlow</div>
+                        <div class="skill__bubble">LangChain</div>
+                        <div class="skill__bubble">Flask</div>
+                        <div class="skill__bubble">Django</div>
+                        <div class="skill__bubble">Hugging Face</div>
+                        
+                        <!-- Backend & Cloud -->
+                        <div class="skill__bubble">Backend</div>
+                        <div class="skill__bubble">GCP</div>
+                        <div class="skill__bubble">AWS</div>
+                        <div class="skill__bubble">Docker</div>
+                        <div class="skill__bubble">Git</div>
                     </div>
                 </div>
             </section>
@@ -571,6 +338,7 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         2025 
                                     </div>
+                                    <button class="experience__details-btn" onclick="showExperienceModal('ta')">View Details</button>
                                 </div>
     
                                 <div>
@@ -594,6 +362,7 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         2023-Present
                                     </div>
+                                    <button class="experience__details-btn" onclick="showExperienceModal('masters')">View Details</button>
                                 </div>
                             </div>
     
@@ -605,6 +374,7 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         2019-2023
                                     </div>
+                                    <button class="experience__details-btn" onclick="showExperienceModal('btech')">View Details</button>
                                 </div>
     
                                 <div>
@@ -624,6 +394,7 @@
                                         <i class="uil uil-calendar-alt"></i>
                                         Sept 2024 - Jan 2025
                                     </div>
+                                    <button class="experience__details-btn" onclick="showExperienceModal('signofi')">View Details</button>
                                 </div>
     
                                 <div>
@@ -641,12 +412,13 @@
                                 </div>
 
                                 <div>
-                                    <h3 class="qualification__title">Researcher - Distributed Computing & ML</h3>
+                                    <h3 class="qualification__title">Grid Computing Developer </h3>
                                     <span class="qualification__subtitle">KEK</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        Oct 2022 - Jul 2023
+                                        Oct 2022 - Sep 2023
                                     </div>
+                                    <button class="experience__details-btn" onclick="showExperienceModal('kek')">View Details</button>
                                 </div>
                             </div>
 
@@ -656,8 +428,9 @@
                                     <span class="qualification__subtitle">Jio-Reliance</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        Jun 2022 - Aug 2022
+                                        Jun 2022 - Nov 2022
                                     </div>
+                                    <button class="experience__details-btn" onclick="showExperienceModal('jio')">View Details</button>
                                 </div>
     
                                 <div>
@@ -673,162 +446,25 @@
                 </div>
             </section>
 
-            <section class="services section" id="services">
-                <h2 class="section__title">My core strengths</h2>
-                <span class="section__subtitle">What I am good at</span>
-
-                <div class="services__container container grid">
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-brain services__icon"></i>
-                            <h3 class="services__title">AI and Machine Learning</h3>
-                        </div>
-                        <span class="button button--flex button--small button--link services__button">
-                           View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <h4 class="services__modal-title">AI and Machine Learning</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I specialize in Machine Learning and Generative AI algorithms.</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I develop AI based end-to-end solutions in the field of finance, Entertainment and more.</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I am looking for a full-time role as a Machine Learning Engineer or AI Researcher/Engineer where I can use my algorithmic thinking and programming expertise.</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I have an inclination for Generative multimodal AI and old fashioned machine learning (XGBoost is my favorite) but also open to roles in Computer Vision, Unsupervised ML, RL and more.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-chart-line services__icon"></i>
-                            <h3 class="services__title">Data Science</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">
-                           View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <h4 class="services__modal-title">Data Science</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I have extensive experience in data preprocessing and transformations, including handling missing data, normalizing datasets, and preparing data for analysis by ensuring quality and consistency. </p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I have worked with dimensionality reduction techniques such as PCA, using them to simplify high-dimensional datasets while retaining critical features and improving model performance.</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>My expertise includes implementing clustering algorithms like K-Means, DBSCAN, and Hierarchical Clustering to identify meaningful patterns and group similar data points for better insights.</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I have a strong background in the entire data mining process, from data exploration and feature engineering to extracting actionable insights and building robust models for complex problems.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-desktop services__icon"></i>
-                            <h3 class="services__title">Web & App development</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">
-                           View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <h4 class="services__modal-title">Web & App development</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I build AI-first applications or web/mobile applications that have an AI component to it.</p>
-                                        
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I have experience with Django, Flask, and Vanilla Js</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Though not an expert, I have also tried my hands at Flutter (cross platform), Swift and Anroid Studio(Kotlin)</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-notebooks services__icon"></i>
-                            <h3 class="services__title">Research & Blogging</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">
-                           View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <h4 class="services__modal-title">Research & Blogging</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I am passionate about research, with a strong focus on Generative AI, AI Interpretability, and Natural Language Processing. </p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I write blogs on different technologies and concepts @ <a href=" https://medium.com/@manikantan.srinivasan2001" target="_blank">Medium</a></p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I am currently working towards a research publication in the domain of Generative AI.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section class="portfolio section" id="portfolio">
-                <h2 class="section__title">Project</h2>
+                <h2 class="section__title">Projects</h2>
                 <span class="section__subtitle">Some of my projects</span>
 
                 <div class="portfolio__container container swiper-container">
                     <div class="swiper-wrapper">
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/machine_unlearning.png" alt="Machine Unlearning" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Machine Unlearning: Erasing concepts from LLMs</h3>
+                                <p class="portfolio__description">In this project, we aim to enable large language models to selectively forget specific information without requiring full retraining. We compare three different approaches — LoRA-based fine-tuning, guardrailing using LLaMA-Guard, and Sparse Autoencoder (SAE)-based unlearning — to assess their effectiveness in targeted forgetting. The workflow includes curated dataset preparation, parameter-efficient training, evaluation through perplexity and retention metrics, and runtime safety checks. This work highlights practical, scalable techniques for efficient and legally compliant machine unlearning.</p>
+                                <a href="https://github.com/mani2001/Machine-Unlearning" class="button button--flex button--small portfolio__button">
+                                    GitHub
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
 
                         <div class="portfolio__content grid swiper-slide">
                             <img src="./assets/img/Blindsight.png" alt="BlindSight image" class="portfolio__img">
@@ -837,6 +473,21 @@
                                 <h3 class="portfolio__title">BlindSight: AI-Powered Voice-Driven File Navigation for the Visually Impaired</h3>
                                 <p class="portfolio__description">BlindSight is our innovative approach to making computer systems more accessible and intuitive for individuals with complete or partial visual impairment. Using just a single key, users can navigate the operating system and perform essential tasks like text-file editing and OS manipulation (e.g., changing directories, listing files, creating folders, etc.). Our mission is to foster inclusivity in the tech space and empower individuals with disabilities by providing them with tools for equal representation in the digital world.</p>
                                 <a href="https://github.com/mani2001/BlindSight" class="button button--flex button--small portfolio__button">
+                                    GitHub
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./assets/img/grading_assistant.png" alt="AI Grading Assistant" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">AI-Powered Grading Assistant</h3>
+                                <p class="portfolio__description">
+                                    In this project, we develop an AI-powered grading assistant designed to automate score prediction and feedback generation for short answers. The system fine-tunes RoBERTa for numerical score prediction and BART for detailed feedback generation using parameter-efficient LoRA methods. The training process involves curated dataset preparation, hyperparameter tuning, and evaluation using metrics such as RMSE, Pearson correlation, and ROUGE scores. This work demonstrates how fine-tuned transformer models can streamline grading tasks by delivering accurate, explainable assessments at scale.
+                                </p>
+                                <a href="https://github.com/mani2001/FineTuningProjectNLP" class="button button--flex button--small portfolio__button">
                                     GitHub
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
@@ -978,7 +629,7 @@ mance using the Inception score (IS) and the Fréchet Inception Distance (FID).
                             <i class="uil uil-envelope contact__icon"></i>
                             <div>
                                 <h3 class="contact__title">Email</h3>
-                                <span class="contact__subtitle">mani696701@gmail.com</span>
+                                <span class="contact__subtitle">mani.srinivasan2k1@gmail.com</span>
                             </div>
                         </div>
 
@@ -1037,5 +688,118 @@ mance using the Inception score (IS) and the Fréchet Inception Distance (FID).
         <script src="./assets/js/swiper-bundle.min.js"></script>
 
         <script src="./assets/js/main.js"></script>
+
+        <!-- Experience Modals -->
+        <div id="signofi-modal" class="experience__modal">
+            <div class="experience__modal-content">
+                <span class="experience__modal-close" onclick="hideExperienceModal('signofi')">&times;</span>
+                <h3>AI Research Engineer Intern</h3>
+                <p>At SignoFi in Raleigh, USA (Sep 2024 – Jan 2025), I worked as an AI Research Engineer Intern where I pioneered an Agentic AI application leveraging Llama 70B and LangChain to retrieve balance sheet data from NoSQL databases, enabling interactive queries and computational analysis for over 50,000 public companies. I also applied Retrieval-Augmented Generation (RAG) and fine-tuning with adaptive chunking strategies to ground Llama 70B and 90B, boosting the Faithfulness score to 0.84 (84%) and enhancing contextual precision, recall, and relevancy (92%) in factual question answering. In addition, I architected a custom workflow on Google Cloud Platform (GCP) using virtual machines, Vertex AI, GCP Buckets, and multi-core GPUs to optimize operations at a portfolio management firm, achieving up to 20% in cost savings.</p>
+            </div>
+        </div>
+
+        <div id="kek-modal" class="experience__modal">
+            <div class="experience__modal-content">
+                <span class="experience__modal-close" onclick="hideExperienceModal('kek')">&times;</span>
+                <h3>Grid Computing Developer</h3>
+                <p>Previously, at KEK in Tsukuba, Japan (Oct 2022 – Sep 2023), I served as a Grid Computing Developer for the prestigious BELLE-2 particle acceleration experiment. This international collaboration involved world-renowned laboratories such as Brookhaven, CERN, KEK, and over 127 institutions including Carnegie Mellon. I engineered innovative software tools that enabled physicists to execute experiments on over 10 PB of distributed data across global data centers. Additionally, I streamlined more than 50 issues on GitLab and JIRA by overhauling complex codebases and working closely with engineers from around the world to improve research efficiency and scalability.</p>
+            </div>
+        </div>
+
+        <div id="jio-modal" class="experience__modal">
+            <div class="experience__modal-content">
+                <span class="experience__modal-close" onclick="hideExperienceModal('jio')">&times;</span>
+                <h3>Software Engineer Intern</h3>
+                <p>Earlier, during my time at Jio in Mumbai, India (Jun 2022 – Nov 2022), I interned as a Software Engineer in the Center of Excellence for AI & ML. I contributed to the development of the BrainOS platform, integrating 7+ verticals across Reliance Industries using knowledge graphs and predictive machine learning, achieving 86% accuracy and 0.79 precision across products like JioTV, Hydrocarbons, and JioMart. I built robust knowledge graphs by preprocessing raw data and implemented over 100 CRUD API functions using gRPC to efficiently query extensive NoSQL databases, using debugging tools to refine 1000+ functions. As part of a cross-functional initiative, I also helped develop a beta version of a user-user collaborative filtering recommendation system using Neo4j and custom graph functions, contributing to a 10% revenue boost for Jio Platforms.</p>
+            </div>
+        </div>
+
+        <div id="ta-modal" class="experience__modal">
+            <div class="experience__modal-content">
+                <span class="experience__modal-close" onclick="hideExperienceModal('ta')">&times;</span>
+                <h3>Teaching Assistant - Data Mining</h3>
+                <p>As a Graduate Teaching Assistant for CS6220 Data Mining under Professor Dr. Sara Arunagiri, I was responsible for validating new assignment sets to ensure comprehensive coverage of key data mining concepts and coding practices. I actively engaged with students by answering technical queries on Microsoft Teams and Piazza, conducted office hours to provide in-depth explanations on a range of topics including classification, clustering, association rule mining, and data preprocessing, and played a key role in grading assignments and projects with a focus on evaluating both conceptual understanding and practical implementation. This role strengthened my expertise in data mining methodologies, algorithmic application, and student mentorship.</p>
+            </div>
+        </div>
+
+        <div id="masters-modal" class="experience__modal">
+            <div class="experience__modal-content">
+                <span class="experience__modal-close" onclick="hideExperienceModal('masters')">&times;</span>
+                <h3>MS in Artificial Intelligence - Northeastern University</h3>
+                <ul> Courses Taken:
+                    <li>Foundations of AI</li>
+                    <li>Machine Learning</li>
+                    <li>Algorithms</li>
+                    <li>Natural Language Processing</li>
+                    <li>Large Language Models in depth</li>
+                    <li>Unsupervised Learning and Data Mining</li>
+                    <li>AI for Human Computer Interaction</li>
+                    <li>Research Focus: Large Language Models and Multimodal AI</li>
+                    <li>GPA: 3.7/4.0</li>
+                    <li>Expected Graduation: May 2025</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="btech-modal" class="experience__modal">
+            <div class="experience__modal-content">
+                <span class="experience__modal-close" onclick="hideExperienceModal('btech')">&times;</span>
+                <h3>BTech in Computer Science - UPES</h3>
+                <p>Skills: Creative Problem Solving · Algorithms · Machine Learning · C++ · Grid Computing · Java · Distributed Systems · Artificial Intelligence (AI) · Jira · Data Analysis · Object-Oriented Programming (OOP) · Supervised Learning · Data Structures · Natural Language Processing (NLP) · Software Development · Oral Communication · Python (Programming Language) · Databases</p>
+            </div>
+        </div>
+
+        <script>
+            // Modal functionality
+            function showModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function hideModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+
+            // Function to show experience modal
+            function showExperienceModal(type) {
+                const modalId = `${type}-modal`;
+                showModal(modalId);
+            }
+
+            // Function to hide experience modal
+            function hideExperienceModal(type) {
+                const modalId = `${type}-modal`;
+                hideModal(modalId);
+            }
+
+            // Close modal when clicking outside
+            document.addEventListener('click', function(event) {
+                const modals = document.getElementsByClassName('experience__modal');
+                Array.from(modals).forEach(modal => {
+                    if (event.target === modal) {
+                        const modalId = modal.id;
+                        const type = modalId.replace('-modal', '');
+                        hideExperienceModal(type);
+                    }
+                });
+            });
+
+            // Prevent modal from closing when clicking inside the modal content
+            document.addEventListener('DOMContentLoaded', function() {
+                const modalContents = document.getElementsByClassName('experience__modal-content');
+                Array.from(modalContents).forEach(content => {
+                    content.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
