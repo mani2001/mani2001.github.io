@@ -1,812 +1,821 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="Manikantan Srinivasan, Manikantan GitHub, mani-ai github, mani-ai GitHub, 
-        mani-ai, Mani, Manikantan S, mani, Artificial Intelligence, AI, Deep Learning, Machine Learning, DL, ML, 
-        Web, web, app, developer, github, git, projects, tutorials, keywords, seo, artificial intelligence, Generative AI, Reinforcement Learning, deep learning, machine learning, 
-        dl, ml, deeplearning, machinelearning, DeepLearning, MachineLearning, Cybersecurity, cybersecurity, research, machine learning USA, ML india, AI Boston, AI USA, ML Boston,
-        India, R&D, Mani, Srinivasan, ManAI">
-        <meta name="author" content="Manikantan Srinivasan">
-        <meta name="description" content="Hey there! I'm Mani. I'm an AI grad student in Boston.">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Manikantan Srinivasan, Manikantan GitHub, mani-ai github, mani-ai GitHub, 
+    mani-ai, Mani, Manikantan S, mani, Artificial Intelligence, AI, Deep Learning, Machine Learning, DL, ML, 
+    Web, web, app, developer, github, git, projects, tutorials, keywords, seo, artificial intelligence, Generative AI, Reinforcement Learning, deep learning, machine learning, 
+    dl, ml, deeplearning, machinelearning, DeepLearning, MachineLearning, Cybersecurity, cybersecurity, research, machine learning USA, ML india, AI Boston, AI USA, ML Boston,
+    India, R&D, Mani, Srinivasan, ManAI">
+    <meta name="author" content="Manikantan Srinivasan">
+    <meta name="description" content="Hey there! I'm Mani. I'm an AI grad student in Boston.">
 
-        <link rel="icon" href="./assets/img/favicon.png">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 
-        <title>Mani - AI GRAD STUDENT | Portfolio</title>
+    <title>Mani - AI GRAD STUDENT | Portfolio</title>
 
-        <style>
-            /* Experience Modal Styles */
-            .experience__details-btn {
-                padding: 8px 16px;
-                background-color: var(--first-color);
-                color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                font-size: 14px;
-                margin-top: 10px;
-                transition: background-color 0.3s;
-            }
+    <style>
+        /* Experience Modal Styles */
+        .experience__details-btn {
+            padding: 8px 16px;
+            background-color: var(--first-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
 
-            .experience__details-btn:hover {
-                background-color: var(--first-color-alt);
-            }
+        .experience__details-btn:hover {
+            background-color: var(--first-color-alt);
+        }
 
-            .experience__modal {
-                display: none;
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-            }
+        .experience__modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-            .experience__modal-content {
-                background-color: white;
-                margin: 15% auto;
-                padding: 20px;
-                border-radius: 8px;
-                width: 80%;
-                max-width: 600px;
-                position: relative;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
+        .experience__modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-            .experience__modal-close {
-                position: absolute;
-                right: 20px;
-                top: 10px;
-                font-size: 28px;
-                font-weight: bold;
-                cursor: pointer;
-                color: #666;
-            }
+        .experience__modal-close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #666;
+        }
 
-            .experience__modal-close:hover {
-                color: #333;
-            }
+        .experience__modal-close:hover {
+            color: #333;
+        }
 
-            .experience__modal h3 {
-                margin-top: 0;
-                color: #333;
-                margin-bottom: 15px;
-            }
+        .experience__modal h3 {
+            margin-top: 0;
+            color: #333;
+            margin-bottom: 15px;
+        }
 
-            .experience__modal p {
-                color: #444;
-                line-height: 1.6;
-                margin-bottom: 8px;
-            }
+        .experience__modal p {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
 
-            .experience__modal ul {
-                list-style-type: disc;
-                margin-left: 20px;
-                color: #444;
-            }
+        .experience__modal ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #444;
+        }
 
-            .experience__modal li {
-                margin-bottom: 8px;
-                line-height: 1.4;
-            }
-        </style>
-    </head>
-    <body>
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo"><i class="uil uil-circle"></i> Mani</a>
+        .experience__modal li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><i class="uil uil-circle"></i> Mani</a>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Home
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> About
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-chart-pie-alt nav__icon"></i> Skills
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#experience" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i> Experience
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i> Projects
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#blog" class="nav__link">
-                                <i class="uil uil-blogger-alt nav__icon"></i> Blog
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contact
-                            </a>
-                        </li>
-
-                    </ul>
-                    
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
-                </div>
-
-                <div class="nav__btns">
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <main class="main">
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/manikantan2001/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-
-                            <a href="https://github.com/mani2001" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>                            
-                            </a>
-                           
-                        </div>
-    
-                        <div class="home__img">
-                            <svg class="home__blob" ViewBox="0 0 200 187">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-
-                                    <image class="home__blob-img" x="25" y="18" xlink:href="./assets/img/mani.png"/>
-
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="home__data">
-                            <h1 class="home__title">Hey! I'm Mani</h1>
-                            <h3 class="home__subtitle">I'm an AI Engineer</h3>
-                            <p class="home__description">
-                                Artificial Intelligence | Machine Learning | Data Mining | Multimodal Generative AI | Backend Engineer <br><br>
-                            </p>
-                            <a href="#contact" class="button button--flex">
-                                Contact <i class="uil uil-message button__icon"></i>
-                            </a>
-                            <a href="assets/img/resume.pdf" target="_blank" class="button button--flex">
-                                Resume <i class="uil uil-file-download button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Scroll down</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> Home
                         </a>
-                    </div>
-                </div>
-            </section>
+                    </li>
 
-            <section class="about section" id="about">
-                <h2 class="section__title">About</h2>
-                <span class="section__subtitle">My Introduction</span>
-
-                <div class="about__container container grid">
-                    <img src="./assets/img/mani2.JPG" alt="Mani" class="about__img">
-
-                    <div class="about__data">
-                        <p class="about__description">
-                            I am deeply passionate about creating intelligent machines that enhance human capability and accessibility. With a strong background in artificial intelligence, machine learning, and data mining, I enjoy tackling complex challenges and transforming them into practical, human-centric solutions. My experience spans natural language processing, retrieval-augmented generation, and vector databases, where I focus on building systems that make a real-world impact. Through three internship experiences in the computer science domain and rigorous coursework and project work, I have honed my technical skills and problem-solving abilities. Driven by a commitment to continuous learning and hands-on development, I strive to design intelligent systems that empower individuals and promote inclusivity.
-                        </p>
-
-                        <div class="about__info">
-                            <div>
-                                <span class="about__info-title">3+</span>
-                                <span class="about__info-name">Internships</span>
-                            </div>
-
-                            <div>
-                                <span class="about__info-title">3.7</span>
-                                <span class="about__info-name">GPA</span>
-                            </div>
-
-                            <div>
-                                <span class="about__info-title">20+</span>
-                                <span class="about__info-name">Projects</span>
-                            </div>
-                        </div>
-
-                        <div class="about__buttons">
-                            <a href="#contact" class="button button--flex">
-                                Leave a message <i class="uil uil-comment-download button__icon"></i>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="skills section" id="skills">
-                <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">My Expertise</span>
-
-                <div class="skills__container container">
-                    <div class="skills__bubble-wrapper">
-                        <!-- AI & ML Skills -->
-                        <div class="skill__bubble">AI Agents</div>
-                        <div class="skill__bubble">LLM Fine-tuning</div>
-                        <div class="skill__bubble">Generative AI</div>
-                        <div class="skill__bubble">RAG Systems</div>
-                        <div class="skill__bubble">Knowledge Graphs</div>
-                        <div class="skill__bubble">Machine Learning</div>
-                        <div class="skill__bubble">Deep Learning</div>
-                        <div class="skill__bubble">NLP</div>
-                        <div class="skill__bubble">Computer Vision</div>
-                        
-                        <!-- Data Related -->
-                        <div class="skill__bubble">Data Mining</div>
-                        <div class="skill__bubble">Data Science</div>
-                        <div class="skill__bubble">Data Analytics</div>
-                        
-                        <!-- Programming Languages -->
-                        <div class="skill__bubble">Python</div>
-                        <div class="skill__bubble">C++</div>
-                        <div class="skill__bubble">SQL</div>
-                        <div class="skill__bubble">Bash</div>
-                        
-                        <!-- Frameworks & Tools -->
-                        <div class="skill__bubble">PyTorch</div>
-                        <div class="skill__bubble">TensorFlow</div>
-                        <div class="skill__bubble">LangChain</div>
-                        <div class="skill__bubble">Flask</div>
-                        <div class="skill__bubble">Django</div>
-                        <div class="skill__bubble">Hugging Face</div>
-                        
-                        <!-- Backend & Cloud -->
-                        <div class="skill__bubble">Backend</div>
-                        <div class="skill__bubble">GCP</div>
-                        <div class="skill__bubble">AWS</div>
-                        <div class="skill__bubble">Docker</div>
-                        <div class="skill__bubble">Git</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="qualification section" id="experience">
-                <h2 class="section__title">Experience</h2>
-                <span class="section__subtitle">Professional and Academic Experience</span>
-
-                <div class="qualification__container container">
-                    <div class="qualification__tabs">
-                        <div class="qualification__button button--flex" data-target="#education">
-                            <i class="uil uil-graduation-cap qualification__icon"></i>
-                            Academic
-                        </div>
-
-                        <div class="qualification__button button--flex qualification__active" data-target="#work">
-                            <i class="uil uil-briefcase-alt qualification__icon"></i>
-                            Professional
-                        </div>
-                    </div>
-
-                    <div class="qualification__sections">
-                        <div class="qualification__content" data-content id="education">
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Teaching Assistant for CS6220 Data Mining</h3>
-                                    <span class="qualification__subtitle">Khoury College of Computer Sciences, Northeastern University</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2025 
-                                    </div>
-                                    <button class="experience__details-btn" onclick="showExperienceModal('ta')">View Details</button>
-                                </div>
-    
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-                            
-                            <div class="qualification__data">                                 
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                          
-                                <div>
-                                    <h3 class="qualification__title">MS in Artificial Intelligence</h3>
-                                    <span class="qualification__subtitle">Foundations of AI, LLMs, Algorithms, Machine Learning | Northeastern University |Boston, USA</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2023-Present
-                                    </div>
-                                    <button class="experience__details-btn" onclick="showExperienceModal('masters')">View Details</button>
-                                </div>
-                            </div>
-    
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">BTech in Computer Science (Spz AI&ML)</h3>
-                                    <span class="qualification__subtitle">Software Engineering, NLP, AI, ML, Data Mining, OOP | UPES | Dehradun, India</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2019-2023
-                                    </div>
-                                    <button class="experience__details-btn" onclick="showExperienceModal('btech')">View Details</button>
-                                </div>
-    
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                </div>
-                            </div>
-    
-                        </div>
-    
-                        <div class="qualification__content qualification__active" data-content id="work">
-
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">AI Research Engineer</h3>
-                                    <span class="qualification__subtitle">SignoFi</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Sept 2024 - Jan 2025
-                                    </div>
-                                    <button class="experience__details-btn" onclick="showExperienceModal('signofi')">View Details</button>
-                                </div>
-    
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-                            
-                            <div class="qualification__data">
-                                <div></div>
-    
-                                <div class="qualification__time">
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="qualification__title">Software Engineer - R&D </h3>
-                                    <span class="qualification__subtitle">KEK</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Aug 2022 - Aug 2023
-                                    </div>
-                                    <button class="experience__details-btn" onclick="showExperienceModal('kek')">View Details</button>
-                                </div>
-                            </div>
-
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Software Engineer Intern - Knowledge Graphs</h3>
-                                    <span class="qualification__subtitle">Jio-Reliance</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        May 2022 - Jul 2022
-                                    </div>
-                                    <button class="experience__details-btn" onclick="showExperienceModal('jio')">View Details</button>
-                                </div>
-    
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-                        
-                        
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="portfolio section" id="portfolio">
-                <h2 class="section__title">Projects</h2>
-                <span class="section__subtitle">Some of my projects</span>
-
-                <div class="portfolio__container container swiper-container">
-                    <div class="swiper-wrapper">
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/clinai1.png" alt="Clinical AI assistant" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">ClinAI: MCP based Agentic AI for healthcare Clinical assistant </h3>
-                                <p class="portfolio__description">ClinAI is an agentic AI system that automates the extraction, organization, and retrieval of clinical data from doctor-patient conversations using large language models. Built on the Model Context Protocol (MCP) framework, ClinAI enables seamless coordination between multiple AI agents and tools. It uses Google Gemini for post-session speaker role labeling and intelligent summarization of transcriptions. The workflow involves real-time audio capture, structured note generation, editable record validation, and persistent storage via MongoDB. ClinAI demonstrates the potential of Agentic AI to reduce administrative overhead, ensure data traceability, and deliver scalable, privacy-conscious healthcare automation.</p>
-                                <a href="https://github.com/mani2001/clinai-agent" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/machine_unlearning.png" alt="Machine Unlearning" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Machine Unlearning: Erasing concepts from LLMs</h3>
-                                <p class="portfolio__description">In this project, we aim to enable large language models to selectively forget specific information without requiring full retraining. We compare three different approaches — LoRA-based fine-tuning, guardrailing using LLaMA-Guard, and Sparse Autoencoder (SAE)-based unlearning — to assess their effectiveness in targeted forgetting. The workflow includes curated dataset preparation, parameter-efficient training, evaluation through perplexity and retention metrics, and runtime safety checks. This work highlights practical, scalable techniques for efficient and legally compliant machine unlearning.</p>
-                                <a href="https://github.com/mani2001/Machine-Unlearning" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/Blindsight.png" alt="BlindSight image" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">BlindSight: AI-Powered Voice-Driven File Navigation for the Visually Impaired</h3>
-                                <p class="portfolio__description">BlindSight is our innovative approach to making computer systems more accessible and intuitive for individuals with complete or partial visual impairment. Using just a single key, users can navigate the operating system and perform essential tasks like text-file editing and OS manipulation (e.g., changing directories, listing files, creating folders, etc.). Our mission is to foster inclusivity in the tech space and empower individuals with disabilities by providing them with tools for equal representation in the digital world.</p>
-                                <a href="https://github.com/mani2001/BlindSight" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/grading_assistant.png" alt="AI Grading Assistant" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">AI-Powered Grading Assistant</h3>
-                                <p class="portfolio__description">
-                                    In this project, we develop an AI-powered grading assistant designed to automate score prediction and feedback generation for short answers. The system fine-tunes RoBERTa for numerical score prediction and BART for detailed feedback generation using parameter-efficient LoRA methods. The training process involves curated dataset preparation, hyperparameter tuning, and evaluation using metrics such as RMSE, Pearson correlation, and ROUGE scores. This work demonstrates how fine-tuned transformer models can streamline grading tasks by delivering accurate, explainable assessments at scale.
-                                </p>
-                                <a href="https://github.com/mani2001/FineTuningProjectNLP" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/anakinBreakingBad.png" alt="RL Game image" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Anakin Breaking Bad</h3>
-                                <p class="portfolio__description">
-                                    Developed a fun game based on Star Wars. Used Reinforcement learning techniques like value iteration, Natural language processing, Text similarity and Pygame. Do check it out and give suggestions!
-                                </p>
-                                <a href="https://github.com/Mani676901/ANAKIN_BREAKING_BAD" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                          
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/VAE_DCGAN.png" alt="VAE_GAN" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">DCGAN vs VAE - A comparison for Image Generation</h3>
-                                <p class="portfolio__description">
-                                    This project explores Deep Convolutional Generative Adversarial Networks (DC-
-GANs) and Variational Autoencoders (VAEs) by developing and comparing them
-with the CIFAR-10 dataset. Utilizing the PyTorch library, these models are built
-from scratch to generate and reconstruct images. The study evaluates their perfor-
-mance using the Inception score (IS) and the Fréchet Inception Distance (FID).
-                                </p>
-                                <a href="assets/img/ML_project-1.pdf" target="_blank" class="button button--flex button--small portfolio__button">
-                                    View Paper
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/memory.png" alt="Memory icon" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Memory Companion</h3>
-                                <p class="portfolio__description">
-                                    MemoryCompanion is a tool for people suffering with Mild Cognitive Impairment (MCI), a condition in which users face memory or thinking related problems but not to the point that it affects their daily activities. These people tend to miss social events, forget appointments and have issues with remembering names or conversations with other people. MemoryCompanion helps these people keep track of conversations, names, tasks to do and much more!
-                                </p>
-                                <a href="https://github.com/mani2001/MemoryCompanion" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/scd.png" alt="Stock bot icon" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Surface Crack Detection</h3>
-                                <p class="portfolio__description">Built a surface crack detection web-app with a lightweight custom CNN to help civil inspectors inspect concrete surface quality in earthquake prone areas.</p>
-                                <a href="https://github.com/mani2001/Surface_Crack_Detection" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/RL_techniques.png" alt="" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Agent Navigation using reinforcement algorithms (comparative study)</h3>
-                                <p class="portfolio__description">Reinforcement learning has been widely used as a learning mechanism for an artificial life system. I built a project that compares path planning algorithms like Q- learning, SARSA, DQL (Path planning via deep reinforcement learning is an end-to-end method) in terms of optimality and time taken. I also visualize the path planned by each one of them using simple graphics.</p>
-                                <a href="https://github.com/mani2001/Agent-Navigation-using-reinforcement-learning" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section>
-
-            <section class="project section">
-                <div class="project__bg">
-                    <div class="project__container container grid">
-                        <div class="project__data">
-                            <h2 class="project__title">Want to collaborate?</h2>
-                            <p class="project__description">   
-                                Feel free to reach out if you're interested in collaborating on projects or research, particularly in the fields of AI, Data Science, ML, GenAI, or related areas!
-                            </p>
-                            <a href="#contact" class="button button--flex button--white" style="margin-bottom: 30px;">
-                                Contact
-                                <i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
-            
-                        <img src="./assets/img/contact.png" alt="Web Development vector art taken from internet symbolizing services that I do. Credits to original author" class="project__img">
-                    </div>
-                </div>
-            </section>
-            <section class="blog section" id="blog">
-                <h2 class="section__title">Blog</h2>
-                <span class="section__subtitle">Explore My Medium Articles</span>
-                <div class="blog__container container grid">
-                    <div class="blog__data">
-                        <p class="blog__description">
-                            Stay updated with my thoughts, insights, and research in AI, Data Science, ML, and more on Medium!
-                        </p>
-                        <a href="https://medium.com/@manikantan.srinivasan2001" target="_blank" class="button button--flex button--white">
-                            Visit My Blog
-                            <i class="uil uil-arrow-right button__icon"></i>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
                         </a>
-                    </div>
-                </div>
-            </section>
-            
+                    </li>
 
-            <section class="contact section" id="contact">
-                <h2 class="section__title">Contact</h2>
-                <span class="section__subtitle">Get in touch with me</span>
-
-                <div class="contact__container container grid">
-                    <div>
-                        
-                        <div class="contact__information">
-                            <i class="uil uil-envelope contact__icon"></i>
-                            <div>
-                                <h3 class="contact__title">Email</h3>
-                                <span class="contact__subtitle">mani.srinivasan2k1@gmail.com</span>
-                            </div>
-                        </div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-                            <div>
-                                <h3 class="contact__title">Location</h3>
-                                <span class="contact__subtitle">Boston, USA</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer__bg">
-                <div class="footer__container container grid">
-                    <div>
-                        <h1 class="footer__title">Mani</h1>
-                        <span class="footer__subtitle">AI Engineer</span>
-                    </div>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#services" class="footer__link">Services</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio" class="footer__link">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="footer__link">Contact</a>
-                        </li>
-                    </ul>
-
-                    <div class="footer__socials">
-                        <a href="https://www.github.com/mani2001" target="_blank" class="footer__social">
-                            <i class="uil uil-github-alt"></i>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-chart-pie-alt nav__icon"></i> Skills
                         </a>
-                        <a href="https://www.linkedin.com/in/manikantan2001/" target="_blank" class="footer__social">
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#experience" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i> Experience
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> Projects
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#blog" class="nav__link">
+                            <i class="uil uil-blogger-alt nav__icon"></i> Blog
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+                
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/manikantan2001/" target="_blank" class="home__social-icon">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
+
+                        <a href="https://github.com/mani2001" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" ViewBox="0 0 200 187">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+
+                                <image class="home__blob-img" x="25" y="18" xlink:href="./assets/img/mani.png"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Hey! I'm Mani</h1>
+                        <h3 class="home__subtitle">I'm an AI Engineer</h3>
+                        <p class="home__description">
+                            Artificial Intelligence | Machine Learning | Data Mining | Multimodal Generative AI | Backend Engineer <br><br>
+                        </p>
+                        <a href="#contact" class="button button--flex">
+                            Contact <i class="uil uil-message button__icon"></i>
+                        </a>
+                        <a href="assets/img/resume.pdf" target="_blank" class="button button--flex">
+                            Resume <i class="uil uil-file-download button__icon"></i>
+                        </a>
                     </div>
                 </div>
 
-                <p class="footer__copy">&#169; Mani 2024</p>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
             </div>
-        </footer>
+        </section>
 
-        <a href="#" class="scrollup" id="scroll-top">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
+        <section class="about section" id="about">
+            <h2 class="section__title">About</h2>
+            <span class="section__subtitle">My Introduction</span>
 
-        <script src="./assets/js/swiper-bundle.min.js"></script>
+            <div class="about__container container grid">
+                <img src="./assets/img/mani2.JPG" alt="Mani" class="about__img">
 
-        <script src="./assets/js/main.js"></script>
+                <div class="about__data">
+                    <p class="about__description">
+                        I am deeply passionate about creating intelligent machines that enhance human capability and accessibility. With a strong background in artificial intelligence, machine learning, and data mining, I enjoy tackling complex challenges and transforming them into practical, human-centric solutions. My experience spans natural language processing, retrieval-augmented generation, and vector databases, where I focus on building systems that make a real-world impact. Through three internship experiences in the computer science domain and rigorous coursework and project work, I have honed my technical skills and problem-solving abilities. Driven by a commitment to continuous learning and hands-on development, I strive to design intelligent systems that empower individuals and promote inclusivity.
+                    </p>
 
-        <!-- Experience Modals -->
-        <div id="signofi-modal" class="experience__modal">
-            <div class="experience__modal-content">
-                <span class="experience__modal-close" onclick="hideExperienceModal('signofi')">&times;</span>
-                <h3>AI Research Engineer Intern</h3>
-                <p>At SignoFi in Raleigh, USA (Sep 2024 – Jan 2025), I worked as an AI Research Engineer Intern where I pioneered an Agentic AI application leveraging Llama 70B and LangChain to retrieve balance sheet data from NoSQL databases, enabling interactive queries and computational analysis for over 50,000 public companies. I also applied Retrieval-Augmented Generation (RAG) and fine-tuning with adaptive chunking strategies to ground Llama 70B and 90B, boosting the Faithfulness score to 0.84 (84%) and enhancing contextual precision, recall, and relevancy (92%) in factual question answering. In addition, I architected a custom workflow on Google Cloud Platform (GCP) using virtual machines, Vertex AI, GCP Buckets, and multi-core GPUs to optimize operations at a portfolio management firm, achieving up to 20% in cost savings.</p>
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">3+</span>
+                            <span class="about__info-name">Internships</span>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title">3.7</span>
+                            <span class="about__info-name">GPA</span>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title">20+</span>
+                            <span class="about__info-name">Projects</span>
+                        </div>
+                    </div>
+
+                    <div class="about__buttons">
+                        <a href="#contact" class="button button--flex">
+                            Leave a message <i class="uil uil-comment-download button__icon"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div id="kek-modal" class="experience__modal">
-            <div class="experience__modal-content">
-                <span class="experience__modal-close" onclick="hideExperienceModal('kek')">&times;</span>
-                <h3>Grid Computing Developer</h3>
-                <p>Previously, at KEK in Tsukuba, Japan (Oct 2022 – Sep 2023), I served as a Grid Computing Developer for the prestigious BELLE-2 particle acceleration experiment. This international collaboration involved world-renowned laboratories such as Brookhaven, CERN, KEK, and over 127 institutions including Carnegie Mellon. I engineered innovative software tools that enabled physicists to execute experiments on over 10 PB of distributed data across global data centers. Additionally, I streamlined more than 50 issues on GitLab and JIRA by overhauling complex codebases and working closely with engineers from around the world to improve research efficiency and scalability.</p>
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My Expertise</span>
+
+            <div class="skills__container container">
+                <div class="skills__bubble-wrapper">
+                    <div class="skill__bubble">AI Agents</div>
+                    <div class="skill__bubble">LLM Fine-tuning</div>
+                    <div class="skill__bubble">Generative AI</div>
+                    <div class="skill__bubble">RAG Systems</div>
+                    <div class="skill__bubble">Knowledge Graphs</div>
+                    <div class="skill__bubble">Machine Learning</div>
+                    <div class="skill__bubble">Deep Learning</div>
+                    <div class="skill__bubble">NLP</div>
+                    <div class="skill__bubble">Computer Vision</div>
+
+                    <div class="skill__bubble">Data Mining</div>
+                    <div class="skill__bubble">Data Science</div>
+                    <div class="skill__bubble">Data Analytics</div>
+
+                    <div class="skill__bubble">Python</div>
+                    <div class="skill__bubble">C++</div>
+                    <div class="skill__bubble">SQL</div>
+                    <div class="skill__bubble">Bash</div>
+
+                    <div class="skill__bubble">PyTorch</div>
+                    <div class="skill__bubble">TensorFlow</div>
+                    <div class="skill__bubble">LangChain</div>
+                    <div class="skill__bubble">Flask</div>
+                    <div class="skill__bubble">Django</div>
+                    <div class="skill__bubble">Hugging Face</div>
+
+                    <div class="skill__bubble">Backend</div>
+                    <div class="skill__bubble">GCP</div>
+                    <div class="skill__bubble">AWS</div>
+                    <div class="skill__bubble">Docker</div>
+                    <div class="skill__bubble">Git</div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div id="jio-modal" class="experience__modal">
-            <div class="experience__modal-content">
-                <span class="experience__modal-close" onclick="hideExperienceModal('jio')">&times;</span>
-                <h3>Software Engineer Intern</h3>
-                <p>Earlier, during my time at Jio in Mumbai, India (Jun 2022 – Nov 2022), I interned as a Software Engineer in the Center of Excellence for AI & ML. I contributed to the development of the BrainOS platform, integrating 7+ verticals across Reliance Industries using knowledge graphs and predictive machine learning, achieving 86% accuracy and 0.79 precision across products like JioTV, Hydrocarbons, and JioMart. I built robust knowledge graphs by preprocessing raw data and implemented over 100 CRUD API functions using gRPC to efficiently query extensive NoSQL databases, using debugging tools to refine 1000+ functions. As part of a cross-functional initiative, I also helped develop a beta version of a user-user collaborative filtering recommendation system using Neo4j and custom graph functions, contributing to a 10% revenue boost for Jio Platforms.</p>
+        <section class="qualification section" id="experience">
+            <h2 class="section__title">Experience</h2>
+            <span class="section__subtitle">Professional and Academic Experience</span>
+
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex" data-target="#education">
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        Academic
+                    </div>
+
+                    <div class="qualification__button button--flex qualification__active" data-target="#work">
+                        <i class="uil uil-briefcase-alt qualification__icon"></i>
+                        Professional
+                    </div>
+                </div>
+
+                <div class="qualification__sections">
+                    <div class="qualification__content" data-content id="education">
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Teaching Assistant for CS6220 Data Mining</h3>
+                                <span class="qualification__subtitle">Khoury College of Computer Sciences, Northeastern University</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2025 
+                                </div>
+                                <button class="experience__details-btn" onclick="showExperienceModal('ta')">View Details</button>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">MS in Artificial Intelligence</h3>
+                                <span class="qualification__subtitle">Foundations of AI, LLMs, Algorithms, Machine Learning | Northeastern University |Boston, USA</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2023-Present
+                                </div>
+                                <button class="experience__details-btn" onclick="showExperienceModal('masters')">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">BTech in Computer Science (Spz AI&ML)</h3>
+                                <span class="qualification__subtitle">Software Engineering, NLP, AI, ML, Data Mining, OOP | UPES | Dehradun, India</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2019-2023
+                                </div>
+                                <button class="experience__details-btn" onclick="showExperienceModal('btech')">View Details</button>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qualification__content qualification__active" data-content id="work">
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Forward Deployed Engineer</h3>
+                                <span class="qualification__subtitle">Nebius</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Jan 2026 - Present
+                                </div>
+                                <button class="experience__details-btn" onclick="showExperienceModal('nebius')">View Details</button>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div class="qualification__time">
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">AI Research Engineer</h3>
+                                <span class="qualification__subtitle">SignoFi</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Sept 2024 - Jan 2025
+                                </div>
+                                <button class="experience__details-btn" onclick="showExperienceModal('signofi')">View Details</button>
+                            </div>
+                        </div>
+                        
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Software Engineer - R&amp;D</h3>
+                                <span class="qualification__subtitle">KEK</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    Aug 2022 - Aug 2023
+                                </div>
+                                <button class="experience__details-btn" onclick="showExperienceModal('kek')">View Details</button>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div class="qualification__time">
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">Software Engineer Intern - Knowledge Graphs</h3>
+                                <span class="qualification__subtitle">Jio-Reliance</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    May 2022 - Jul 2022
+                                </div>
+                                <button class="experience__details-btn" onclick="showExperienceModal('jio')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div id="ta-modal" class="experience__modal">
-            <div class="experience__modal-content">
-                <span class="experience__modal-close" onclick="hideExperienceModal('ta')">&times;</span>
-                <h3>Teaching Assistant - Data Mining</h3>
-                <p>As a Graduate Teaching Assistant for CS6220 Data Mining under Professor Dr. Sara Arunagiri, I was responsible for validating new assignment sets to ensure comprehensive coverage of key data mining concepts and coding practices. I actively engaged with students by answering technical queries on Microsoft Teams and Piazza, conducted office hours to provide in-depth explanations on a range of topics including classification, clustering, association rule mining, and data preprocessing, and played a key role in grading assignments and projects with a focus on evaluating both conceptual understanding and practical implementation. This role strengthened my expertise in data mining methodologies, algorithmic application, and student mentorship.</p>
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Some of my projects</span>
+
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/clinai1.png" alt="Clinical AI assistant" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">ClinAI: MCP based Agentic AI for healthcare Clinical assistant</h3>
+                            <p class="portfolio__description">ClinAI is an agentic AI system that automates the extraction, organization, and retrieval of clinical data from doctor-patient conversations using large language models. Built on the Model Context Protocol (MCP) framework, ClinAI enables seamless coordination between multiple AI agents and tools. It uses Google Gemini for post-session speaker role labeling and intelligent summarization of transcriptions. The workflow involves real-time audio capture, structured note generation, editable record validation, and persistent storage via MongoDB. ClinAI demonstrates the potential of Agentic AI to reduce administrative overhead, ensure data traceability, and deliver scalable, privacy-conscious healthcare automation.</p>
+                            <a href="https://github.com/mani2001/clinai-agent" class="button button--flex button--small portfolio__button">
+                                GitHub
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/machine_unlearning.png" alt="Machine Unlearning" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Machine Unlearning: Erasing concepts from LLMs</h3>
+                            <p class="portfolio__description">In this project, we aim to enable large language models to selectively forget specific information without requiring full retraining. We compare three different approaches — LoRA-based fine-tuning, guardrailing using LLaMA-Guard, and Sparse Autoencoder (SAE)-based unlearning — to assess their effectiveness in targeted forgetting. The workflow includes curated dataset preparation, parameter-efficient training, evaluation through perplexity and retention metrics, and runtime safety checks. This work highlights practical, scalable techniques for efficient and legally compliant machine unlearning.</p>
+                            <a href="https://github.com/mani2001/Machine-Unlearning" class="button button--flex button--small portfolio__button">
+                                GitHub
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/Blindsight.png" alt="BlindSight image" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">BlindSight: AI-Powered Voice-Driven File Navigation for the Visually Impaired</h3>
+                            <p class="portfolio__description">BlindSight is our innovative approach to making computer systems more accessible and intuitive for individuals with complete or partial visual impairment. Using just a single key, users can navigate the operating system and perform essential tasks like text-file editing and OS manipulation (e.g., changing directories, listing files, creating folders, etc.). Our mission is to foster inclusivity in the tech space and empower individuals with disabilities by providing them with tools for equal representation in the digital world.</p>
+                            <a href="https://github.com/mani2001/BlindSight" class="button button--flex button--small portfolio__button">
+                                GitHub
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/grading_assistant.png" alt="AI Grading Assistant" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">AI-Powered Grading Assistant</h3>
+                            <p class="portfolio__description">
+                                In this project, we develop an AI-powered grading assistant designed to automate score prediction and feedback generation for short answers. The system fine-tunes RoBERTa for numerical score prediction and BART for detailed feedback generation using parameter-efficient LoRA methods. The training process involves curated dataset preparation, hyperparameter tuning, and evaluation using metrics such as RMSE, Pearson correlation, and ROUGE scores. This work demonstrates how fine-tuned transformer models can streamline grading tasks by delivering accurate, explainable assessments at scale.
+                            </p>
+                            <a href="https://github.com/mani2001/FineTuningProjectNLP" class="button button--flex button--small portfolio__button">
+                                GitHub
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/anakinBreakingBad.png" alt="RL Game image" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Anakin Breaking Bad</h3>
+                            <p class="portfolio__description">
+                                Developed a fun game based on Star Wars. Used Reinforcement learning techniques like value iteration, Natural language processing, Text similarity and Pygame. Do check it out and give suggestions!
+                            </p>
+                            <a href="https://github.com/Mani676901/ANAKIN_BREAKING_BAD" class="button button--flex button--small portfolio__button">
+                                GitHub
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/VAE_DCGAN.png" alt="VAE_GAN" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">DCGAN vs VAE - A comparison for Image Generation</h3>
+                            <p class="portfolio__description">
+                                This project explores Deep Convolutional Generative Adversarial Networks (DC-
+                                GANs) and Variational Autoencoders (VAEs) by developing and comparing them
+                                with the CIFAR-10 dataset. Utilizing the PyTorch library, these models are built
+                                from scratch to generate and reconstruct images. The study evaluates their perfor-
+                                mance using the Inception score (IS) and the Fréchet Inception Distance (FID).
+                            </p>
+                            <a href="assets/img/ML_project-1.pdf" target="_blank" class="button button--flex button--small portfolio__button">
+                                View Paper
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/memory.png" alt="Memory icon" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Memory Companion</h3>
+                            <p class="portfolio__description">
+                                MemoryCompanion is a tool for people suffering with Mild Cognitive Impairment (MCI), a condition in which users face memory or thinking related problems but not to the point that it affects their daily activities. These people tend to miss social events, forget appointments and have issues with remembering names or conversations with other people. MemoryCompanion helps these people keep track of conversations, names, tasks to do and much more!
+                            </p>
+                            <a href="https://github.com/mani2001/MemoryCompanion" class="button button--flex button--small portfolio__button">
+                                GitHub
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/scd.png" alt="Stock bot icon" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Surface Crack Detection</h3>
+                            <p class="portfolio__description">Built a surface crack detection web-app with a lightweight custom CNN to help civil inspectors inspect concrete surface quality in earthquake prone areas.</p>
+                            <a href="https://github.com/mani2001/Surface_Crack_Detection" class="button button--flex button--small portfolio__button">
+                                GitHub
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./assets/img/RL_techniques.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Agent Navigation using reinforcement algorithms (comparative study)</h3>
+                            <p class="portfolio__description">Reinforcement learning has been widely used as a learning mechanism for an artificial life system. I built a project that compares path planning algorithms like Q- learning, SARSA, DQL (Path planning via deep reinforcement learning is an end-to-end method) in terms of optimality and time taken. I also visualize the path planned by each one of them using simple graphics.</p>
+                            <a href="https://github.com/mani2001/Agent-Navigation-using-reinforcement-learning" class="button button--flex button--small portfolio__button">
+                                GitHub
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <div class="swiper-pagination"></div>
             </div>
-        </div>
+        </section>
 
-        <div id="masters-modal" class="experience__modal">
-            <div class="experience__modal-content">
-                <span class="experience__modal-close" onclick="hideExperienceModal('masters')">&times;</span>
-                <h3>MS in Artificial Intelligence - Northeastern University</h3>
-                <ul> Courses Taken:
-                    <li>Foundations of AI</li>
-                    <li>Machine Learning</li>
-                    <li>Algorithms</li>
-                    <li>Natural Language Processing</li>
-                    <li>Large Language Models in depth</li>
-                    <li>Unsupervised Learning and Data Mining</li>
-                    <li>AI for Human Computer Interaction</li>
-                    <li>Research Focus: Large Language Models and Multimodal AI</li>
-                    <li>GPA: 3.7/4.0</li>
-                    <li>Expected Graduation: May 2025</li>
+        <section class="project section">
+            <div class="project__bg">
+                <div class="project__container container grid">
+                    <div class="project__data">
+                        <h2 class="project__title">Want to collaborate?</h2>
+                        <p class="project__description">   
+                            Feel free to reach out if you're interested in collaborating on projects or research, particularly in the fields of AI, Data Science, ML, GenAI, or related areas!
+                        </p>
+                        <a href="#contact" class="button button--flex button--white" style="margin-bottom: 30px;">
+                            Contact
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+
+                    <img src="./assets/img/contact.png" alt="Web Development vector art taken from internet symbolizing services that I do. Credits to original author" class="project__img">
+                </div>
+            </div>
+        </section>
+
+        <section class="blog section" id="blog">
+            <h2 class="section__title">Blog</h2>
+            <span class="section__subtitle">Explore My Medium Articles</span>
+            <div class="blog__container container grid">
+                <div class="blog__data">
+                    <p class="blog__description">
+                        Stay updated with my thoughts, insights, and research in AI, Data Science, ML, and more on Medium!
+                    </p>
+                    <a href="https://medium.com/@manikantan.srinivasan2001" target="_blank" class="button button--flex button--white">
+                        Visit My Blog
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact</h2>
+            <span class="section__subtitle">Get in touch with me</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Email</h3>
+                            <span class="contact__subtitle">mani.srinivasan2k1@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle">Boston, USA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Mani</h1>
+                    <span class="footer__subtitle">AI Engineer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#services" class="footer__link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact</a>
+                    </li>
                 </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.github.com/mani2001" target="_blank" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/manikantan2001/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                </div>
             </div>
+
+            <p class="footer__copy">&#169; Mani 2024</p>
         </div>
+    </footer>
 
-        <div id="btech-modal" class="experience__modal">
-            <div class="experience__modal-content">
-                <span class="experience__modal-close" onclick="hideExperienceModal('btech')">&times;</span>
-                <h3>BTech in Computer Science - UPES</h3>
-                <p>Skills: Creative Problem Solving · Algorithms · Machine Learning · C++ · Grid Computing · Java · Distributed Systems · Artificial Intelligence (AI) · Jira · Data Analysis · Object-Oriented Programming (OOP) · Supervised Learning · Data Structures · Natural Language Processing (NLP) · Software Development · Oral Communication · Python (Programming Language) · Databases</p>
-            </div>
+    <a href="#" class="scrollup" id="scroll-top">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Experience Modals -->
+    <div id="nebius-modal" class="experience__modal">
+        <div class="experience__modal-content">
+            <span class="experience__modal-close" onclick="hideExperienceModal('nebius')">&times;</span>
+            <h3>Forward Deployed Engineer</h3>
+            <p><strong>Nebius</strong> | Jan 2026 – Present | New York City, NY</p>
+            <ul>
+                <li>Drove enterprise adoption of Tavily, Nebius’s AI search product, converting 40+ enterprise clients into paying customers and contributing to $1M+ in revenue by enabling production integrations and resolving technical adoption barriers.</li>
+                <li>Architected and deployed agentic automation pipelines using Claude Agent SDK, LangGraph orchestration, and frontier OpenAI models, integrating with HubSpot CRM and Omni analytics, reducing client response times by 20% and automating internal support workflows.</li>
+                <li>Evangelized Tavily’s AI search capabilities across enterprise ecosystems, presenting at multiple AI conferences and industry events and hosting technical webinars, while collaborating with partnerships, customer success, and product teams to engage engineers from organizations such as JPMorgan Chase and IBM, generating 500+ enterprise leads.</li>
+                <li>Diagnosed and resolved 50+ production issues with core engineering teams using Python, FastAPI, MongoDB, and Snowflake, delivering bug fixes and feature improvements. Improved platform reliability and accelerated enterprise deployments.</li>
+                <li>Benchmarked open-source LLMs (e.g., GPT-OSS) by integrating Tavily Search into evaluation pipelines using SEAL-QA and BrowseComp datasets.</li>
+            </ul>
         </div>
+    </div>
 
-        <script>
-            // Modal functionality
-            function showModal(modalId) {
-                const modal = document.getElementById(modalId);
-                if (modal) {
-                    modal.style.display = 'block';
-                    document.body.style.overflow = 'hidden';
+    <div id="signofi-modal" class="experience__modal">
+        <div class="experience__modal-content">
+            <span class="experience__modal-close" onclick="hideExperienceModal('signofi')">&times;</span>
+            <h3>AI Research Engineer Intern</h3>
+            <p>At SignoFi in Raleigh, USA (Sep 2024 – Jan 2025), I worked as an AI Research Engineer Intern where I pioneered an Agentic AI application leveraging Llama 70B and LangChain to retrieve balance sheet data from NoSQL databases, enabling interactive queries and computational analysis for over 50,000 public companies. I also applied Retrieval-Augmented Generation (RAG) and fine-tuning with adaptive chunking strategies to ground Llama 70B and 90B, boosting the Faithfulness score to 0.84 (84%) and enhancing contextual precision, recall, and relevancy (92%) in factual question answering. In addition, I architected a custom workflow on Google Cloud Platform (GCP) using virtual machines, Vertex AI, GCP Buckets, and multi-core GPUs to optimize operations at a portfolio management firm, achieving up to 20% in cost savings.</p>
+        </div>
+    </div>
+
+    <div id="kek-modal" class="experience__modal">
+        <div class="experience__modal-content">
+            <span class="experience__modal-close" onclick="hideExperienceModal('kek')">&times;</span>
+            <h3>Grid Computing Developer</h3>
+            <p>Previously, at KEK in Tsukuba, Japan (Oct 2022 – Sep 2023), I served as a Grid Computing Developer for the prestigious BELLE-2 particle acceleration experiment. This international collaboration involved world-renowned laboratories such as Brookhaven, CERN, KEK, and over 127 institutions including Carnegie Mellon. I engineered innovative software tools that enabled physicists to execute experiments on over 10 PB of distributed data across global data centers. Additionally, I streamlined more than 50 issues on GitLab and JIRA by overhauling complex codebases and working closely with engineers from around the world to improve research efficiency and scalability.</p>
+        </div>
+    </div>
+
+    <div id="jio-modal" class="experience__modal">
+        <div class="experience__modal-content">
+            <span class="experience__modal-close" onclick="hideExperienceModal('jio')">&times;</span>
+            <h3>Software Engineer Intern</h3>
+            <p>Earlier, during my time at Jio in Mumbai, India (Jun 2022 – Nov 2022), I interned as a Software Engineer in the Center of Excellence for AI & ML. I contributed to the development of the BrainOS platform, integrating 7+ verticals across Reliance Industries using knowledge graphs and predictive machine learning, achieving 86% accuracy and 0.79 precision across products like JioTV, Hydrocarbons, and JioMart. I built robust knowledge graphs by preprocessing raw data and implemented over 100 CRUD API functions using gRPC to efficiently query extensive NoSQL databases, using debugging tools to refine 1000+ functions. As part of a cross-functional initiative, I also helped develop a beta version of a user-user collaborative filtering recommendation system using Neo4j and custom graph functions, contributing to a 10% revenue boost for Jio Platforms.</p>
+        </div>
+    </div>
+
+    <div id="ta-modal" class="experience__modal">
+        <div class="experience__modal-content">
+            <span class="experience__modal-close" onclick="hideExperienceModal('ta')">&times;</span>
+            <h3>Teaching Assistant - Data Mining</h3>
+            <p>As a Graduate Teaching Assistant for CS6220 Data Mining under Professor Dr. Sara Arunagiri, I was responsible for validating new assignment sets to ensure comprehensive coverage of key data mining concepts and coding practices. I actively engaged with students by answering technical queries on Microsoft Teams and Piazza, conducted office hours to provide in-depth explanations on a range of topics including classification, clustering, association rule mining, and data preprocessing, and played a key role in grading assignments and projects with a focus on evaluating both conceptual understanding and practical implementation. This role strengthened my expertise in data mining methodologies, algorithmic application, and student mentorship.</p>
+        </div>
+    </div>
+
+    <div id="masters-modal" class="experience__modal">
+        <div class="experience__modal-content">
+            <span class="experience__modal-close" onclick="hideExperienceModal('masters')">&times;</span>
+            <h3>MS in Artificial Intelligence - Northeastern University</h3>
+            <ul>
+                Courses Taken:
+                <li>Foundations of AI</li>
+                <li>Machine Learning</li>
+                <li>Algorithms</li>
+                <li>Natural Language Processing</li>
+                <li>Large Language Models in depth</li>
+                <li>Unsupervised Learning and Data Mining</li>
+                <li>AI for Human Computer Interaction</li>
+                <li>Research Focus: Large Language Models and Multimodal AI</li>
+                <li>GPA: 3.7/4.0</li>
+                <li>Expected Graduation: May 2025</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="btech-modal" class="experience__modal">
+        <div class="experience__modal-content">
+            <span class="experience__modal-close" onclick="hideExperienceModal('btech')">&times;</span>
+            <h3>BTech in Computer Science - UPES</h3>
+            <p>Skills: Creative Problem Solving · Algorithms · Machine Learning · C++ · Grid Computing · Java · Distributed Systems · Artificial Intelligence (AI) · Jira · Data Analysis · Object-Oriented Programming (OOP) · Supervised Learning · Data Structures · Natural Language Processing (NLP) · Software Development · Oral Communication · Python (Programming Language) · Databases</p>
+        </div>
+    </div>
+
+    <script>
+        function showModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function hideModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function showExperienceModal(type) {
+            const modalId = `${type}-modal`;
+            showModal(modalId);
+        }
+
+        function hideExperienceModal(type) {
+            const modalId = `${type}-modal`;
+            hideModal(modalId);
+        }
+
+        document.addEventListener('click', function(event) {
+            const modals = document.getElementsByClassName('experience__modal');
+            Array.from(modals).forEach(modal => {
+                if (event.target === modal) {
+                    const modalId = modal.id;
+                    const type = modalId.replace('-modal', '');
+                    hideExperienceModal(type);
                 }
-            }
+            });
+        });
 
-            function hideModal(modalId) {
-                const modal = document.getElementById(modalId);
-                if (modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            }
-
-            // Function to show experience modal
-            function showExperienceModal(type) {
-                const modalId = `${type}-modal`;
-                showModal(modalId);
-            }
-
-            // Function to hide experience modal
-            function hideExperienceModal(type) {
-                const modalId = `${type}-modal`;
-                hideModal(modalId);
-            }
-
-            // Close modal when clicking outside
-            document.addEventListener('click', function(event) {
-                const modals = document.getElementsByClassName('experience__modal');
-                Array.from(modals).forEach(modal => {
-                    if (event.target === modal) {
-                        const modalId = modal.id;
-                        const type = modalId.replace('-modal', '');
-                        hideExperienceModal(type);
-                    }
+        document.addEventListener('DOMContentLoaded', function() {
+            const modalContents = document.getElementsByClassName('experience__modal-content');
+            Array.from(modalContents).forEach(content => {
+                content.addEventListener('click', function(event) {
+                    event.stopPropagation();
                 });
             });
-
-            // Prevent modal from closing when clicking inside the modal content
-            document.addEventListener('DOMContentLoaded', function() {
-                const modalContents = document.getElementsByClassName('experience__modal-content');
-                Array.from(modalContents).forEach(content => {
-                    content.addEventListener('click', function(event) {
-                        event.stopPropagation();
-                    });
-                });
-            });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 </html>
